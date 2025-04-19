@@ -127,14 +127,17 @@
             font-size: 1.1em;
         }
 
+        /* Styling for the link to look like a button */
         .open-opay-button {
+            display: inline-block; /* Make it behave like a block for padding/margin */
             background: #4CAF50; /* Green color for action button */
-            border: none;
+            border: none; /* Remove default link border */
             padding: 12px 25px;
             border-radius: 10px;
             cursor: pointer;
             font-size: 1.2em;
             color: #fff;
+            text-decoration: none; /* Remove underline */
             margin-top: 20px;
             transition: background 0.3s ease, transform 0.1s ease;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -190,7 +193,7 @@
             Bank: Opay
         </div>
 
-        <button class="open-opay-button" id="openOpayButton">Open Opay</button>
+        <a href="https://play.google.com/store/apps/details?id=team.opay.pay" class="open-opay-button">Open Opay</a>
     </div>
 
     <div class="confetti" id="confetti-container"></div>
@@ -199,7 +202,6 @@
     <script>
         const accountNumber = document.getElementById('accountNumber').innerText;
         const copyButton = document.getElementById('copyButton');
-        const openOpayButton = document.getElementById('openOpayButton');
         const confettiContainer = document.getElementById('confetti-container');
 
         // Function to copy text to clipboard
@@ -266,12 +268,6 @@
         // Event listener for the copy button
         copyButton.addEventListener('click', () => {
             copyTextToClipboard(accountNumber);
-        });
-
-        // Event listener for the Open Opay button
-        openOpayButton.addEventListener('click', () => {
-            // Redirect to the OPay app page on Google Play Store
-            window.location.href = 'https://play.google.com/store/app/details?id=team.opay.pay';
         });
 
         // --- Three.js Background Animation ---
@@ -365,4 +361,5 @@
 
     </script>
 </body>
-</html>
+                </html>
+    
