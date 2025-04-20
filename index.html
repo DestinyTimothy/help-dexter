@@ -270,17 +270,8 @@
 
         // Event listener for the Open Opay button
         openOpayButton.addEventListener('click', () => {
-            // Attempt to open the OPay app using a URL scheme.
-            // The actual scheme might vary or might not be supported by OPay.
-            // A common pattern is 'appname://' or a specific deep link.
-            // This is a best-effort attempt and may not work on all devices.
-            window.location.href = 'opay://'; // This is a hypothetical scheme.
-
-            // You could add a fallback here if the app doesn't open,
-            // for example, redirecting to the OPay website:
-            // setTimeout(() => {
-            //     window.location.href = 'https://www.opayweb.com/';
-            // }, 500); // Redirect after a short delay if the app didn't handle the URL
+            // Redirect to the OPay app page on Google Play Store
+            window.location.href = 'https://play.google.com/store/app/details?id=team.opay.pay';
         });
 
         // --- Three.js Background Animation ---
